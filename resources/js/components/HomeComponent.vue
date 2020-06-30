@@ -7,6 +7,7 @@
                 <router-link to="/logout">Logout</router-link>
             </div>
             <router-link to="/login">Login</router-link>
+            <router-link to="/CreateAlbum">Create Album</router-link>
         </div>
         <div class="card" v-for="album in albums" v-if="albums.length">
             <div class="card-header">

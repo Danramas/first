@@ -2024,11 +2024,15 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {},
   methods: {
     submit: function submit() {
+      var _this = this;
+
       var formData = new FormData();
       formData.append('album_name', this.album_name);
       formData.append('user_id', '1');
       axios.post('/api/CreateAlbum', formData).then(function (response) {
         console.log(response.data.message);
+
+        _this.router.push('/');
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -2048,6 +2052,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -38611,7 +38616,11 @@ var render = function() {
               )
             : _vm._e(),
           _vm._v(" "),
-          _c("router-link", { attrs: { to: "/login" } }, [_vm._v("Login")])
+          _c("router-link", { attrs: { to: "/login" } }, [_vm._v("Login")]),
+          _vm._v(" "),
+          _c("router-link", { attrs: { to: "/CreateAlbum" } }, [
+            _vm._v("Create Album")
+          ])
         ],
         1
       ),
