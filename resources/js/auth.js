@@ -28,3 +28,4 @@ class Auth {
 
 }
 export default Auth;
+require('./bootstrap');
